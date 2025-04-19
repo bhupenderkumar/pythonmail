@@ -26,7 +26,8 @@ EMAIL_BCC_DEFAULT = ""
 # Set your Email Template here
 def getEmailContent(first_name):
     email_content='';
-    email_content ="""<!DOCTYPE html>
+    return (
+        """<!DOCTYPE html>
 
 <head>
 
@@ -49,7 +50,9 @@ def getEmailContent(first_name):
 
 <body class="body">
 
-Dear """ + first_name.capitalize() + """,<br><br>
+Dear """
+        + first_name.capitalize()
+        + """,<br><br>
 As you might already know,31st May is my last day at work with COLT. <br><br>
 It was not an easy decision to make because I truly enjoy working with you here at Colt.<br><br>
 I would like to take this opportunity to thank you for your support and help, it has helped my career to blossom. I have learned a great deal from you and will miss your company.
@@ -62,9 +65,8 @@ Bhupender Kumar<br>
 <a href="https://api.whatsapp.com/send?phone=+91-9717267473"><button class="space">Whatsapp</button></a><br>
 </body>
 
-</html>""";
-
-    return email_content
+</html>"""
+    )
 
 # Loops your contacts list (csv file)
 def loop_contacts(contacts):
